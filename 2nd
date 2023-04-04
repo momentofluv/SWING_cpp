@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+	//정보 입력 받기
+	cout << "이름: ";
+	char name[11];
+	cin.getline(name, 11, '\n');
+	cout << "학번: ";
+	int num;
+	cin >> num;
+	//인사
+	cout << "반갑습니다." << name << "님\n\n";
+	cout << "학점 입력을 시작합니다.\n\n";
+	cout << "================= SWING 31 ================\n";
+
+	//학점 입력
+	float C, Computer, Software, Eng;
+	cout << "C프로그래밍(3학점): ";
+	cin >> C;
+	cout << "컴퓨터및정보보호개론(3학점): ";
+	cin >> Computer;
+	cout << "소프트웨어개발실무영어I(1학점): ";
+	cin >> Software;
+	cout << "대학고급영어(2학점): ";
+	cin >> Eng;
+	cout << "============================================\n\n";
+
+	float avg;
+	avg = (C * 3 + Computer * 3 + Software * 1 + Eng * 2) / 9;
+	cout << name << "(" << num << ")" << "님의 " << "전체 학점은 " << avg << "입니다.";
+
+
+}
